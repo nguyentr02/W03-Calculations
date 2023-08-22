@@ -3,40 +3,91 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_gravity="center_vertical"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="horizontal">
 
         <EditText
             android:id="@+id/number1"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:ems="10"
-            android:textSize="30sp" />
+            android:inputType="number"
+            android:textSize="30sp"
+            android:text="@string/number1"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="40pt">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <CheckBox
+                    android:id="@+id/plusCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                </CheckBox>
+                <TextView
+                    android:id="@+id/plusText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="plus"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <CheckBox
+                    android:id="@+id/multCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    >
+                </CheckBox>
+                <TextView
+                    android:id="@+id/multText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="mult"/>
+            </LinearLayout>
+        </LinearLayout>
 
 
         <EditText
             android:id="@+id/number2"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:ems="10"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:inputType="number"
+            android:text="@string/number2"
+
+            />
 
     </LinearLayout>
 
     <Button
         android:id="@+id/equals"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="1"
+        android:layout_weight="2"
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/equals"
         android:textSize="30sp" />
@@ -44,8 +95,9 @@
     <TextView
         android:id="@+id/answer"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="2000px"
         android:layout_weight="1"
+        android:text="@string/answer"
         android:textSize="30sp" />
 
 </LinearLayout>
